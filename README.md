@@ -1,6 +1,6 @@
 # ConvertidorAlura
 
-Convertidor de monedas y de medidas de peso inglesas creado como respuesta a la consigna del challenge del programa ONE de Alura y Oracle.
+Conversor de monedas y de medidas de peso inglesas creado como respuesta a la consigna del challenge del programa ONE de Alura y Oracle.
 
 Se trata de una aplicación de escritorio creada con JAVA y Netbeans.
 
