@@ -110,12 +110,19 @@ public class InputValorPeso extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      
+      try{
         valorPeso = Double.parseDouble(jTextField1.getText());
         SelectConversionMedidasPeso selectConversionMedidasPeso = new SelectConversionMedidasPeso();
         selectConversionMedidasPeso.valorPeso = valorPeso;       
         selectConversionMedidasPeso.setVisible(true);
         this.setVisible(false); 
+        }catch(java.lang.NumberFormatException ex){
+            Error error = new Error();
+            error.setVisible(true);
+            this.setVisible(false);
+        }
+   
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

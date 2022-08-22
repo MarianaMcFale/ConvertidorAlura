@@ -77,6 +77,11 @@ public class InputValorMoneda extends javax.swing.JFrame {
         jTextField1.setFont(new java.awt.Font("Source Sans Pro", 0, 36)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(102, 102, 102));
         jTextField1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 140, 524, 59));
 
         jLabel2.setFont(new java.awt.Font("Source Sans Pro", 1, 34)); // NOI18N
@@ -91,11 +96,18 @@ public class InputValorMoneda extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        valorMoneda = Double.parseDouble(jTextField1.getText());
-        SelectConversionMoneda selectConversionMoneda = new SelectConversionMoneda();
-         selectConversionMoneda.valorMoneda = valorMoneda; 
-        selectConversionMoneda.setVisible(true);
-        this.setVisible(false);
+        try{
+            valorMoneda = Double.parseDouble(jTextField1.getText());
+            SelectConversionMoneda selectConversionMoneda = new SelectConversionMoneda();
+            selectConversionMoneda.valorMoneda = valorMoneda; 
+            selectConversionMoneda.setVisible(true);
+            this.setVisible(false);
+        }catch(java.lang.NumberFormatException ex){
+            Error error = new Error();
+            error.setVisible(true);
+            this.setVisible(false);
+        }
+      
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -105,6 +117,11 @@ public class InputValorMoneda extends javax.swing.JFrame {
         inicio.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    
+      
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
