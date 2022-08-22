@@ -8,5 +8,7 @@ La aplicación permite hacer conversiones de monedas de pesos argentinos a dóla
 
 Por otro lado, el conversor cuenta con una segunda función que permite convertir medidas de peso inglesas (onzas y libras) a gramos y viceversa. Este conversor será de mucha utilidad para aquellos con gustos Gourmet que buscan nuevos desafíos entre recetas de origen americano y británico.
 
+Aquí pueden ver un video del conversor: https://watch.screencastify.com/v/CgWWlFxfhTMr49gjNruS
+
 
 Desarrollado por Mariana C. Fale - Agosto 2022
